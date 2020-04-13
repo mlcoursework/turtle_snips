@@ -83,3 +83,41 @@ for i in range(10):
   
   
 turtle.clear()
+
+
+
+
+## RANDOM TURTLES ON CANVAS 
+# #!/bin/python3
+
+# from turtle import *
+
+import turtle
+from random import randint
+
+turtle.shape("turtle")
+turtle.speed(5)
+
+def random_colour():
+  r,g,b = randint(0,255), randint(0,255), randint(0,255)
+  turtle.color(r,g,b)
+
+def random_place():
+  turtle.penup()
+  x = randint(-100,100)
+  y = randint(-100,100)
+  turtle.goto(x,y)
+  turtle.pendown()
+  
+  
+def random_heading():
+  turtle.setheading(randint(1,360))
+  
+for i in range(10):
+  random_colour()
+  random_heading()
+  random_place()
+  turtle.stamp()
+  
+  
+# turtle.clear()
